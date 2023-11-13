@@ -39,7 +39,12 @@ names=["Pavithra","Abisha","Sanjana","Karthic Selvi","Abirami","DhanuSri"]
 cs_marks=[78,99,56,88,60,40]
 math_marks=[32,98,45,89,70,86]
 eng_marks=[65,99,76,81,74,3]
-for h,i,j,k in zip(names,cs_marks,math_marks,eng_marks):
+for n,cs,mat,eng in zip(names,cs_marks,math_marks,eng_marks):
+    if ((cs>=90 and mat>=90 and eng>=90)or cs>=80 or ):
+        print(h)
+
+
+
     
 
 
