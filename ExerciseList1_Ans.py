@@ -40,8 +40,34 @@ cs_marks=[78,99,56,88,60,40]
 math_marks=[32,98,45,89,70,86]
 eng_marks=[65,99,76,81,74,3]
 for n,cs,mat,eng in zip(names,cs_marks,math_marks,eng_marks):
-    if ((cs>=90 and mat>=90 and eng>=90)or cs>=80 or ):
-        print(h)
+  if ((cs>=90 and mat>=90 and eng>=90)or cs>=80 or mat>=80 or eng>=80):
+    print(n)
+
+
+'''problem #4
+write a program to find if two strings are same.
+two string are considered same if both strings have same letters in same order, but from different starting point
+eg abcd is same as bcda (a is moved to the right)
+abcd is same as cdab 
+abcd is  not same as cdba
+
+123456 = 456123
+123456 not = 412356
+hint - 
+there are many simple answers. you can try with slice function'''
+def is_same(str1, str2):
+    if (len(str1) != len(str2)):
+        return False
+    temp = str1 + str1
+    return (str2 in temp)
+
+str1 = "ABCD"
+str2 = "CDAB"
+if (is_same(str1, str2)):
+    print("Strings are same")
+else:
+    print("Strings are not same")
+
 
 
 
