@@ -78,6 +78,52 @@ Find the top 3 marks if all classes are combined.
 Find the avg mark of students with passing mark in each class and the classes combined.
 Find which class has the best average mark and least number of failed students.'''
 
+def pass_or_fail(marks):
+    passmark=50
+    pass_std=[]
+    fail_std=[]
+    for mark in marks:
+        if mark>=passmark:
+            pass_std.append(mark)
+        else:
+            fail_std.append(mark)
+    return pass_std,fail_std
+
+#getting the total no of students in each department
+dep_1_tot=int(input("Enter the no of students in dep 1:"))
+dep_2_tot=int(input("Enter the no of students in dep 2:"))
+dep_3_tot=int(input("Enter the no of students in dep 3:"))
+
+#getting their marks in exam for each department
+print("Enter the marks separated by commas")
+marks_dep_1=input("Enter the final exam mark of student of dep 1:").split(',')
+marks_dep_2=input("Enter the final exam mark of student of dep 2:").split(',')
+marks_dep_3=input("Enter the final exam mark of student of dep 3:").split(',')
+marks_tot= marks_dep_1+marks_dep_2+marks_dep_3
+
+#sorting them in ascending order
+marks_dep_1.sort()
+marks_dep_2.sort()
+marks_dep_3.sort()
+marks_tot.sort()
+
+#finding the maximum 3 marks
+top_of_dep1=marks_dep_1[-3:]
+top_of_dep2=marks_dep_2[-3:]
+top_of_dep3=marks_dep_3[-3:]
+top_of_all_dep=marks_tot[-3:]
+
+#function pass or fail calling
+a=pass_or_fail(marks_dep_1)
+b=pass_or_fail(marks_dep_2)
+c=pass_or_fail(marks_dep_3)
+d=pass_or_fail(marks_tot)
+
+#finding the average
+print(a)
+
+
+
 
 
     
