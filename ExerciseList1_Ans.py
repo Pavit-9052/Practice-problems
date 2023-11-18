@@ -9,9 +9,9 @@ abacabadabacabaeabacabadabacaba
 look at the output and find the pattern. Hint - add next letter in the alphabet in each row'''
 start = 'a'
 end = 'g'
-temp = start
+temp = start #creating a temporary variable
 while start <= end:
-    a=temp
+    a=temp # assigning the value of temp to a
     print(temp)
     start = chr(ord(start) + 1)
     temp=temp+start+a
