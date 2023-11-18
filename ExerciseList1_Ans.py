@@ -1,3 +1,34 @@
+'''Problem #1
+Generate the following output using for loop. Go until g.
+a
+aba
+abacaba
+abacabadabacaba
+abacabadabacabaeabacabadabacaba
+
+look at the output and find the pattern. Hint - add next letter in the alphabet in each row'''
+start = 'a'
+end = 'g'
+temp = start
+while start <= end:
+    a=temp
+    print(temp)
+    start = chr(ord(start) + 1)
+    temp=temp+start+a
+
+OUTPUT:-
+a
+aba
+abacaba
+abacabadabacaba
+abacabadabacabaeabacabadabacaba
+abacabadabacabaeabacabadabacabafabacabadabacabaeabacabadabacaba
+abacabadabacabaeabacabadabacabafabacabadabacabaeabacabadabacabagabacabadabacabaeabacabadabacabafabacabadabacabaeabacabadabacaba
+
+
+
+
+
 '''Problem #2
 you have a list of student names and another list with their marks in CS. 
 hard code the values. no need to get it as input
