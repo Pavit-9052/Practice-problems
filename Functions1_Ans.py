@@ -37,7 +37,7 @@ numbers=[45,63,52,78,37,99,40,91]
 bubble_sort(numbers)
 print("Ascending order of numbers:", numbers)
 OUTPUT:-
-
+Ascending order of numbers: [37, 40, 45, 52, 63, 78, 91, 99]
 Problem 6:
 You are running a cafe. Write a program (only the functions with input and output) that you need to run the cafe.
 
