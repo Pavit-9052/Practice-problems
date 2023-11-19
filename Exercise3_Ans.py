@@ -90,6 +90,32 @@ last letter and reverse (eg cinema becomes acinem), if the word has numbers, spe
  Write an app that can code and decode the message.'''
 
 
+''' Sort the numbers in an array (ascending or descending). Write a function that finds the largest number in an array'''
+def find_large(a):
+    max=int(a[0])
+    for i in a:
+        if int(i)>max:
+            max=int(i)
+    return max
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+numbers=[45,63,52,78,37,99,40,91]
+bubble_sort(numbers)
+print("Ascending order of numbers:", numbers)
+out=find_large(numbers)
+print("The largest number in the given sequence is",out)
+
+OUTPUT:-
+Ascending order of numbers: [37, 40, 45, 52, 63, 78, 91, 99]
+The largest number in the given sequence is 99
+
+
+
+
 
 
 
