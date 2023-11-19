@@ -1,22 +1,18 @@
-'''No need to write actual code. Only pseudo code is enough
-For eg 
-#adds two numbers
-def addnumber(num1, num2) #takes two numbers 
-    #add the numbers and return the result
-    return result 
-
-#main code
-#get input from users
-result = addnumber(num1, num2)
-print the result
-
-Before writing code, make sure to read https://www.w3schools.com/python/python_functions.asp 
-
-For all the following problems, identify what needs to be in a function, what will be its input
-and its output parameters.
-
 Problem 1:
 Write a program to calculate your avg marks in CS subject in the last 3 exams.
+def avg_cal(a,b,c):
+    avg=(a+b+c)/3
+    print("The average marks in last 3 exams is:",avg)
+a=int(input("Enter the CS mark in exam 1:"))
+b=int(input("Enter the CS mark in exam 2:"))
+c=int(input("Enter the CS mark in exam 3:"))
+avg_cal(a,b,c)
+
+OUTPUT:-
+Enter the CS mark in exam 1:65
+Enter the CS mark in exam 2:87
+Enter the CS mark in exam 3:96
+The average marks in last 3 exams is: 82.66666666666667
 
 Problem 2:
 Write a program to calculate avg marks of your class, in CS subject in the last 3 exams.
