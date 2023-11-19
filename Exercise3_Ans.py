@@ -43,7 +43,8 @@ Enter the time (in terms of years) 3:1
 If your principal amount is 60000.0 with interest rate 6.0, then you will get 3600.00 in time of 1 year.
 
 #1.1 - Display the data from the above problem in a table format.
-
+  
+# pip install prettytable
 from prettytable import PrettyTable
 def compound_interest(principal_amount,interest_rate,time):
     amount=principal_amount*(1+(interest_rate/100))**time
@@ -57,8 +58,8 @@ for i in range(n):
     b=float(input(f"Enter the rate of interest {i+1}:"))
     c=int(input(f"Enter the time (in terms of years) {i+1}:"))
     d=compound_interest(a,b,c)
-    output.append([a,b,c,d])
-t=PrettyTable(['Principal Amount','Interest Rate','Time(in years)','Final Amount'])
+    output.append([a,b,c,d]) #appending it as a list in tuple to store all values
+t=PrettyTable(['Principal Amount','Interest Rate','Time(in years)','Final Amount']) #creating the row header
 for row in output:
     t.add_row(row)
 print(t)
@@ -81,6 +82,14 @@ Enter the time (in terms of years) 3:1
 |     50000.0      |      6.0      |       1        |    3000.0    |
 |     60000.0      |      6.0      |       1        |    3600.0    |
 +------------------+---------------+----------------+--------------+
+
+'''2. You have a message that you want to send to your friend. You don't want others to see the message. You code the message and send it.
+The alg to code is - split each word in half and reverse it (eg cricket becomes ketccri), if the word ends with a vowel, split at the 
+last letter and reverse (eg cinema becomes acinem), if the word has numbers, spell the number but add A as first and last letters
+ (8 pm becomes AeightA pm ).
+ Write an app that can code and decode the message.'''
+
+
 
 
 
