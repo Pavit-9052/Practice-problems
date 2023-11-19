@@ -25,8 +25,18 @@ Problem 4:
 You are reponsible for making dinner for your family. Wrtie all the functions and its input/output.
 Eg - buying ingredients, cutting veg, etc.
 
-Problem 5:
-Write a program to sort an array of numbers in ascending order. Use functions.
+#Problem 5:
+#Write a program to sort an array of numbers in ascending order. Use functions.
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+numbers=[45,63,52,78,37,99,40,91]
+bubble_sort(numbers)
+print("Ascending order of numbers:", numbers)
+OUTPUT:-
 
 Problem 6:
 You are running a cafe. Write a program (only the functions with input and output) that you need to run the cafe.
