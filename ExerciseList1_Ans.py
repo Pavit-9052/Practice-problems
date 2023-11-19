@@ -11,10 +11,9 @@ start = 'a'
 end = 'g'
 temp = start #creating a temporary variable
 while start <= end:
-    a=temp # assigning the value of temp to a
     print(temp)
     start = chr(ord(start) + 1)
-    temp=temp+start+a
+    temp=temp+start+temp
 
 OUTPUT:-
 a
