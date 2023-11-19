@@ -90,7 +90,7 @@ last letter and reverse (eg cinema becomes acinem), if the word has numbers, spe
  Write an app that can code and decode the message.'''
 
 
-''' Sort the numbers in an array (ascending or descending). Write a function that finds the largest number in an array'''
+''' 3.Sort the numbers in an array (ascending or descending). Write a function that finds the largest number in an array'''
 def find_large(a):
     max=int(a[0])
     for i in a:
@@ -112,6 +112,30 @@ print("The largest number in the given sequence is",out)
 OUTPUT:-
 Ascending order of numbers: [37, 40, 45, 52, 63, 78, 91, 99]
 The largest number in the given sequence is 99
+
+'''4.THere are two arrays of numbers. the numbers are sorted in ascending order. 
+Find the numbers that are common in both arrays. 
+Eg - array 1 = [1,3,7,9,13,14], array2 [1,2,7,13,15]. answer - [1,7,13]'''
+a=[45,63,78,59,65,99,75,12]
+b=[78,12,96,32,99,65]
+a.sort()
+b.sort()
+print("The array 1 is:",a)
+print("The array 2 is:",b)
+output=[]
+for i in a:
+    for j in b:
+        if i==j:
+            output.append(i)
+print("The common numbers:",*output)
+
+OUTPUT:-
+The array 1 is: [12, 45, 59, 63, 65, 75, 78, 99]
+The array 2 is: [12, 32, 65, 78, 96, 99]
+The common numbers: 12 65 78 99
+
+
+
 
 
 
