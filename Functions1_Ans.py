@@ -49,6 +49,41 @@ Total Average marks: 84.44444444444446
 Problem 3:
 Write a program to calculate avg marks for each student and no of students whose avg is above 75%
  in CS subject in the last 3 exams.
+def calculate_average_marks(subject_marks):
+    total_marks = sum(subject_marks)
+    num_exams = len(subject_marks)
+    average_marks = total_marks / num_exams
+    return average_marks
+
+def count(student_data, value):
+    count_above = 0
+
+    for cs_marks in student_data:
+        avg_marks = calculate_average_marks(cs_marks)
+        if avg_marks >= value:
+            count_above += 1
+
+    return count_above
+
+student_data = [
+    [75, 80, 85],
+    [90, 85, 88],
+    [78, 9, 87],
+]
+
+for i, cs_marks in enumerate(student_data):
+    avg_marks = calculate_average_marks(cs_marks)
+    print(f"Student{i + 1} - Average marks in CS: {avg_marks}")
+
+value = 75
+count = count(student_data, value)
+print(f"Number of students with average above {value}%: {count}")
+
+OUTPUT:-
+Student1 - Average marks in CS: 80.0
+Student2 - Average marks in CS: 87.66666666666667
+Student3 - Average marks in CS: 58.0
+Number of students with average above 75%: 2
 
 Problem 4:
 You are reponsible for making dinner for your family. Wrtie all the functions and its input/output.
