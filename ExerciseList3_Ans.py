@@ -89,7 +89,47 @@ last letter and reverse (eg cinema becomes acinem), if the word has numbers, spe
  (8 pm becomes AeightA pm ).
  Write an app that can code and decode the message.'''
 
+'''You have a message that you want to send to your friend. You don't want others to see the message. You code the message and send it.
+The alg to code is - split each word in half and reverse it (eg cricket becomes ketccri), if the word ends with a vowel, split at the 
+last letter and reverse (eg cinema becomes acinem), if the word has numbers, spell the number but add A as first and last letters
+ (8 pm becomes AeightA pm ).'''
+import inflect
+def split_string_in_half(s):
+    length = len(s)
+    midpoint = length // 2
 
+    first_half = s[:midpoint]
+    second_half = s[midpoint:]
+
+    return first_half, second_half
+
+def encode(sen):
+    words=sen.split()
+    for word in words:
+        if word.isalpha():
+            first_half,second_half=split_string_in_half(word)
+            if first_half[-1] in 'aieouAEIOU':
+                out1=first_half[-1]+first_half[:-1]
+            else:
+                out1=first_half
+            if second_half[-1] in 'aieou' or 'AEIOU':
+                out2=second_half[-1]+second_half[:-1]
+            else:
+                out2=second_half
+            print(out1+out2,end=" ")
+        elif word.isdigit():
+            p=inflect.engine()
+            out3='A'+p.number_to_words(word)+'A'
+            print(out3 , end=" ")
+
+sentence=input("Enter the sentence:")
+encode(sentence)
+
+'''OUTPUT:-
+Enter the sentence:Lets meet you by 7 pm in google meet
+eLst emte yuo by AsevenA pm in ogoegl emte'''
+                
+            
 ''' 3.Sort the numbers in an array (ascending or descending). Write a function that finds the largest number in an array'''
 def find_large(a):
     max=int(a[0])
