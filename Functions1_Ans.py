@@ -128,9 +128,64 @@ Ascending order of numbers: [37, 40, 45, 52, 63, 78, 91, 99]
 Problem 6:
 You are running a cafe. Write a program (only the functions with input and output) that you need to run the cafe.
 
-Problem 7:
+'''Problem 7:
 
 Its is a single player game where the user starts with 0 points. User keeps rolling the 
 dice.If the rolled number is 0, game ends. If the rolled number is even, then 2 points are
  added. If the number is odd, then if the number is 1,3 then the user has to jump. 
  If the number is 5, then 3 points are added. The game ends when the user has 50 points.'''
+import random
+
+def dice_roll():
+    return random.randint(1, 6)
+def play_game():
+    points = 0
+    while points <= 50:
+        number =  dice_roll()
+        if number == 0:
+            print("Game Over! You rolled a 0.")
+            break
+        elif number % 2 == 0:
+            points += 2
+            print(f"You rolled {number}. You gained 2 points. Total points: {points}")
+        else:
+            if number in [1, 3]:
+                print(f"You rolled {number}. You have to jump!")
+            elif number == 5:
+                points += 3
+                print(f"You rolled 5. You gained 3 points. Total points: {points}")
+
+    if points >= 50:
+        print(f"Congratulations! You won the game.")
+play_game()
+
+OUPUT:-
+You rolled 4. You gained 2 points. Total points: 2
+You rolled 5. You gained 3 points. Total points: 5
+You rolled 2. You gained 2 points. Total points: 7
+You rolled 4. You gained 2 points. Total points: 9
+You rolled 1. You have to jump!
+You rolled 2. You gained 2 points. Total points: 11
+You rolled 6. You gained 2 points. Total points: 13
+You rolled 6. You gained 2 points. Total points: 15
+You rolled 6. You gained 2 points. Total points: 17
+You rolled 4. You gained 2 points. Total points: 19
+You rolled 5. You gained 3 points. Total points: 22
+You rolled 5. You gained 3 points. Total points: 25
+You rolled 5. You gained 3 points. Total points: 28
+You rolled 1. You have to jump!
+You rolled 4. You gained 2 points. Total points: 30
+You rolled 1. You have to jump!
+You rolled 4. You gained 2 points. Total points: 32
+You rolled 2. You gained 2 points. Total points: 34
+You rolled 2. You gained 2 points. Total points: 36
+You rolled 5. You gained 3 points. Total points: 39
+You rolled 4. You gained 2 points. Total points: 41
+You rolled 5. You gained 3 points. Total points: 44
+You rolled 4. You gained 2 points. Total points: 46
+You rolled 2. You gained 2 points. Total points: 48
+You rolled 3. You have to jump!
+You rolled 2. You gained 2 points. Total points: 50
+You rolled 4. You gained 2 points. Total points: 52
+Congratulations! You reached 52 points and won the game.
+
