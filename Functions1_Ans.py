@@ -16,6 +16,35 @@ The average marks in last 3 exams is: 82.66666666666667
 
 Problem 2:
 Write a program to calculate avg marks of your class, in CS subject in the last 3 exams.
+def calculate_average_marks(subject_marks):
+    total_marks = sum(subject_marks)
+    num_exams = len(subject_marks)
+    average_marks = total_marks / num_exams
+    return average_marks
+
+def total_avg(a, b, c):
+    toa_avg = (a + b + c) / 3
+    return toa_avg
+
+cs_marks_exam1 = [75, 80, 85]
+cs_marks_exam2 = [90, 85, 88]
+cs_marks_exam3 = [78, 92, 87]
+
+a = calculate_average_marks(cs_marks_exam1)
+b = calculate_average_marks(cs_marks_exam2)
+c = calculate_average_marks(cs_marks_exam3)
+d = total_avg(a, b, c)
+
+print("Average marks in Exam 1:", a)
+print("Average marks in Exam 2:", b)
+print("Average marks in Exam 3:", c)
+print("Total Average marks:", d)
+
+OUTPUT:-
+Average marks in Exam 1: 80.0
+Average marks in Exam 2: 87.66666666666667
+Average marks in Exam 3: 85.66666666666667
+Total Average marks: 84.44444444444446
 
 Problem 3:
 Write a program to calculate avg marks for each student and no of students whose avg is above 75%
@@ -24,6 +53,29 @@ Write a program to calculate avg marks for each student and no of students whose
 Problem 4:
 You are reponsible for making dinner for your family. Wrtie all the functions and its input/output.
 Eg - buying ingredients, cutting veg, etc.
+    
+def buy_ingredients():
+    return ["rice", "carrots", "peppers", "green beans", "onions", "soy sauce", "oil", "salt"]
+
+def cook_rice():
+    return "Cooked rice"
+
+def chop_vegetables(carrots,onions):
+    return "Chopped " + vegetables
+
+def cook_vegetables(chopped_vegetables, oil, garlic):
+    return f("cooked {chopped_vegetables} in {oil}")
+
+def mix_all(cooked_rice, cook_vegetables salt, pepper):
+    return f("Mixed {cooked_rice}, {cook_vegetables}, salt, and pepper")
+
+def serve_dinner(fried_rice):
+    print("Dinner is served: " + fried_rice)
+
+def sauce(soy_sauce):
+    return f("Added{soy_sauce}")
+
+#call all functions
 
 #Problem 5:
 #Write a program to sort an array of numbers in ascending order. Use functions.
