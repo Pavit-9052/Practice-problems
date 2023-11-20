@@ -125,8 +125,68 @@ bubble_sort(numbers)
 print("Ascending order of numbers:", numbers)
 OUTPUT:-
 Ascending order of numbers: [37, 40, 45, 52, 63, 78, 91, 99]
-Problem 6:
-You are running a cafe. Write a program (only the functions with input and output) that you need to run the cafe.
+
+'''Problem 6:
+You are running a cafe. Write a program (only the functions with input and output) that you need to run the cafe.'''
+    
+menu = {
+    "coffee": 10.0,
+    "sandwich": 35.0,
+    "cake": 100.0
+}
+
+def display_menu():
+    print("Menu:")
+    for item, price in menu.items():
+        print(f"{item}: Rs {price:.2f}")
+
+def take_order():
+    order = {}
+    display_menu()
+    while True:
+        item_name = input("Enter the item name you'd like to order (or 'done' to finish): ").lower()
+        if item_name.lower() == 'done':
+            break
+        if item_name in menu:
+            quantity = int(input("Enter the quantity: "))
+            order[item_name] = quantity
+        else:
+            print("Invalid item. Please choose from the menu.")
+    return order
+
+def calculate_order_total(order):
+    total_cost = 0
+    for item, quantity in order.items():
+        if item in menu:
+            item_price = menu[item]
+            total_cost += item_price * quantity
+    return total_cost
+
+
+def process_payment(total_cost):
+    print("Total amount due: Rs {:.2f}".format(total_cost))
+
+
+print("Welcome to the Cafe!")
+order = take_order()
+total_cost = calculate_order_total(order)
+process_payment(total_cost)
+print(" Thank you! Come again!")
+
+OUTPUT:-
+Welcome to the Cafe!
+Menu:
+coffee: Rs 10.00
+sandwich: Rs 35.00
+cake: Rs 100.00
+Enter the item name you'd like to order (or 'done' to finish): coffee
+Enter the quantity: 2
+Enter the item name you'd like to order (or 'done' to finish): cake
+Enter the quantity: 5
+Enter the item name you'd like to order (or 'done' to finish): done
+Total amount due: Rs 520.00
+ Thank you! Come again!
+
 
 '''Problem 7:
 
