@@ -4,16 +4,27 @@ that are the same without any other specific word in between.
  For example, count the occurrences of "apple apple" but not "apple orange apple."'''
 
 
-sentence='pavi abi pavi pavi abi abi abi pavi'
+sentence = 'pavi abi pavi pavi abi abi abi pavi a a'
 words = sentence.split()
-count=0
-for i in range(len(words) - 1): #To iterate from the 1st word to the word befor last
-    if words[i] == words[i + 1]: #Comparing the current and next word
-        count += 1
-print(f"Count of Occurrences: {count}")
+dict1 = {}
+
+for i in range(len(words) - 1):
+    if words[i] == words[i + 1]:
+        repeat_word = words[i]
+        if repeat_word in dict1:
+            dict1[repeat_word] += 1
+        else:
+            dict1[repeat_word] = 1
+
+print("Occurrences of words:")
+for word, count in dict1.items():
+    print(f"{word}: {count}")
 
 
 '''
 OUTPUT:-
-Count of Occurrences: 3
+Occurrences of words:
+pavi: 1
+abi: 2
+a: 1
 '''
