@@ -7,8 +7,8 @@ that are the same without any other specific word in between.
 sentence='pavi abi pavi pavi abi abi abi pavi'
 words = sentence.split()
 count=0
-for i in range(len(words) - 1):
-    if words[i] == words[i + 1]:
+for i in range(len(words) - 1): #To iterate from the 1st word to the word befor last
+    if words[i] == words[i + 1]: #Comparing the current and next word
         count += 1
 print(f"Count of Occurrences: {count}")
 
